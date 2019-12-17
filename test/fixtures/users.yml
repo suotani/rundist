@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  run_mode: 1
+  custome_url: MyString
+
+two:
+  name: MyString
+  run_mode: 1
+  custome_url: MyString

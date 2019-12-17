@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mode_id: MyString
+  start_point: MyString
+  end_point: MyString
+  dist: 9.99
+
+two:
+  mode_id: MyString
+  start_point: MyString
+  end_point: MyString
+  dist: 9.99
