@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag    "users_new", media: 'all', 'data-turbolinks-track': 'reload' %>
+<% if @sw.error_messages.present? %>
+  <% @sw.error_messages.each do |message| %>
+    <p class="error_message"><%= message %></p>
+  <% end %>
+<% end %>
+<%= form_tag(user_works_path) do %>
+  <div class="input">
+    <label class="input_label">距離(km)</label>
+    <%= number_field_tag :dist, @sw.dist > 0 ? @sw.dist : nil, step: 0.01 %>
+  </div>
+
+  <div class="input">
+    <label class="input_label">消費カロリー(kcal)</label>
+    <%= number_field_tag :cal, @sw.cal > 0 ? @sw.cal : nil, step: 0.01 %>
+  </div>
+
+  <div class="submit">
+    <%= submit_tag "OK", class: "btn btn-primary" %>
+  </div>
+<% end %>

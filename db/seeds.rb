@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Mode.create(name: "イージーモード", content: "短距離のランニング等に適しています。目安は1日1~5km程度")
+Mode.create(name: "ハードモード", content: "長距離のランニングやサイクリングに向いています。目安は1日5以上km")
