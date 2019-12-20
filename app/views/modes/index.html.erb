@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag    "modes_index", media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<ul>
+<% @modes.each do |mode| %>
+  <li>
+    <span class="id"><%= mode.id %></span>
+    <span class="name">
+      <%= link_to mode.name, check_points_path(id: mode.id) %>
+    </span>
+    <span class="count"><%= mode.check_points.count %></span>
+    <span class="content"><%= mode.content %></span>
+  <li>
+<% end %>
+</ul>

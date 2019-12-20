@@ -25,14 +25,14 @@ class SubWork
   end
 
   def check_dist
-    unless @dist >= 1 && @dist < 1000
-      @error_messages.append("距離は1以上1000未満の数値のみ入力可能です")
+    unless @dist >= 0 && @dist < 1000
+      @error_messages.append("距離は0以上1000未満の数値のみ入力可能です")
     end
   end
 
   def check_cal
-    unless @dist >= 1 && @dist < 1000
-      @error_messages.append("消費カロリーは1以上1000未満の数値のみ入力可能です")
+    unless @dist >= 0 && @dist < 1000
+      @error_messages.append("消費カロリーは0以上1000未満の数値のみ入力可能です")
     end
   end
 end

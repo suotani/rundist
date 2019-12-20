@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag    "check_points_index", media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<ul>
+<% @check_points.each do |cp| %>
+  <li>
+    <span class="id"><%= cp.id %></span>
+    <span class="start_point">
+      <%= cp.start_point %>
+    </span>
+    <span class="dist"><%= cp.dist %>km</span>
+  <li>
+<% end %>
+</ul>

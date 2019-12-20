@@ -1,0 +1,25 @@
+ul{
+  list-style: none;
+  padding: 0px 3px;
+  box-sizing: border-box;
+  width: 100%;
+}
+li {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+span.id{
+  width: 10%;
+}
+
+span.start_point{
+  width: 60%
+}
+span.dist{
+  width: 20%;
+}
+span.content{
+  width: 100%;
+}

@@ -1,11 +1,15 @@
-<h2>総走行距離</h2>
-<p><%= @total_dist %>km</p>
-<h2>総消費カロリー</h2>
-<p><%= @total_cal %>kcal</p>
-
-<h2>本日の運動量</h2>
-<p>
-<%= @work.dist %>km
-/
-<%= @work.cal %>kcal
-</p>
+<%= stylesheet_link_tag    "works_index", media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="conteiner">
+  <h2>総走行距離</h2>
+  <p><%= @total_dist.round(2) %>km</p>
+  <p>大阪ー東京間(50.3km)を達成しました！</p>
+  <p>次のチェックポイントまであと11km</p>
+  <h2>総消費カロリー</h2>
+  <p><%= @total_cal.round(2) %>kcal</p>
+  <h2>本日の運動量</h2>
+  <p>
+  <%= @work.dist.round(2) %>km
+  /
+  <%= @work.cal.round(2) %>kcal
+  </p>
+</div>

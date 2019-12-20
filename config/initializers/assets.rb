@@ -13,3 +13,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 Rails.application.config.assets.precompile += %w( common.css )
 Rails.application.config.assets.precompile += %w( users_new.css )
+Rails.application.config.assets.precompile += %w( works_index.css )
+Rails.application.config.assets.precompile += %w( modes_index.css )
+Rails.application.config.assets.precompile += %w( check_points_index.css )
