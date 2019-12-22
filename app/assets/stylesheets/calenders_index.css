@@ -1,0 +1,37 @@
+table{
+  margin: 0px;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+tr{
+  border-bottom: solid 1px #444;
+  min-height: 50px;
+}
+td{
+  height: 80px;
+  width: 14%;
+  position: relative; 
+  word-break: break-all;
+}
+p{
+  margin: 0px;
+}
+td span{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+td.blank{
+  background-color: #222222;
+}
+td.run{
+  background-color: chartreuse;
+}
+.month_move{
+  border-bottom: solid 1px black;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 5px;
+  margin-bottom: 10px;
+}
