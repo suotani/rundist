@@ -13,7 +13,25 @@
 
   <body>
     <header>
-      <h1>ハシッタ君</h1>
+    <% page_titles = {
+      "users_new": "ユーザー登録",
+      "users_create": "ユーザー登録",
+      "works_index": "サマリー",
+      "works_new": "記録",
+      "works_create": "記録",
+      "modes_index": "モード一覧",
+      "calenders_index": "カレンダー"
+    }
+    %>
+      <div class="header-info" >
+        <h1>ハシッタ君</h1>
+        <p class="page_title">
+          <% if @current_user && ["users", "works", "calenders"].include?(controller.controller_name) %>
+            <%= link_to "サマリー", user_works_path(user_id: @current_user.custom_url) %>
+            <%= link_to "カレンダー", user_calenders_path(user_id: @current_user.custom_url) %>
+          <% end %>
+        </p>
+      </div>
       <div class="header-menu">
         <ul>
           <% if @current_user && ["users", "works", "calenders"].include?(controller.controller_name) %>
@@ -24,19 +42,10 @@
         </ul>
       </div>
     </header>
-    <% page_titles = {
-      "users_new": "ユーザー登録",
-      "users_create": "ユーザー登録",
-      "works_index": "サマリー",
-      "works_new": "記録",
-      "works_create": "記録",
-      "modes_index": "モード一覧"
-    }
-    %>
+    
     <% if flash[:notice].present? %>
       <p class="notice_message"><%= flash[:notice] %></p>
     <% end %>
-    <p class="page_title">><%= page_titles[:"#{view_name}"] %></p>
     <%= yield %>
   </body>
 </html>

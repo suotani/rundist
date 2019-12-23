@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'calender/index'
   root to: "users#new"
 
   resources :users, only: [:create] do

@@ -13,6 +13,7 @@ td{
   width: 14%;
   position: relative; 
   word-break: break-all;
+  border-right: solid 1px black;
 }
 p{
   margin: 0px;

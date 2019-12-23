@@ -7,7 +7,23 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 4px 10px;
-  color: white
+  color: white;
+  margin-bottom: 8px;
+}
+.header-info{
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.header-info a{
+  margin-right: 5px;
+  color: white;
+}
+
+.header-info p{
+  font-size: 13px;
+  margin: 0px;
 }
 
 header h1{
@@ -15,6 +31,7 @@ header h1{
   font-family: serif;
   display: flex;
   align-items: center;
+  font-size: 25px;
 }
 
 header ul{

@@ -1,12 +1,11 @@
 <%= stylesheet_link_tag    "calenders_index", media: 'all', 'data-turbolinks-track': 'reload' %>
 
 <div class="month_move">
-  <p>前の月</p>
-  <p>次の月</p>
+  <p><%= link_to "前の月", user_calenders_path(user_id: @current_user.custom_url, year: (@first_day - 1.month).year, month: (@first_day - 1.month).month) %></p>
+  <p><%= link_to "次の月", user_calenders_path(user_id: @current_user.custom_url, year: (@first_day + 1.month).year, month: (@first_day + 1.month).month) %></p>
 </div>
 
 <p>表示月：<%= @year %>/<%= @month %></p>
-<p>上段：距離(km)、下段：消費カロリー(kcal)</p>
 <table class="calender">
   <tr>
     <th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th>
@@ -40,3 +39,4 @@
   <% end %>
 
 </table>
+<p>上段：距離(km)、下段：消費カロリー(kcal)</p>
