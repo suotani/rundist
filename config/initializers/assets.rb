@@ -16,4 +16,7 @@ Rails.application.config.assets.precompile += %w( users_new.css )
 Rails.application.config.assets.precompile += %w( works_index.css )
 Rails.application.config.assets.precompile += %w( modes_index.css )
 Rails.application.config.assets.precompile += %w( check_points_index.css )
+Rails.application.config.assets.precompile += %w( check_points_new.css )
 Rails.application.config.assets.precompile += %w( calenders_index.css )
+Rails.application.config.assets.precompile += %w( check_points.js )
+

@@ -1,2 +1,21 @@
-<h1>CheckPoints#new</h1>
-<p>Find me in app/views/check_points/new.html.erb</p>
+<%= stylesheet_link_tag    "check_points_new", media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<%= form_tag(check_points_path) do %>
+  <ul>
+    <% @check_points.each do |cp| %>
+      <li>
+        <%= text_field_tag "check_points[][mode_id]", cp.mode_id, style: "display: none" %>
+        <span class="id">
+          <%= text_field_tag "check_points[][id]", cp.id %>
+        </span>
+        <span class="start_point">
+          <%= text_field_tag "check_points[][start_point]", cp.start_point %>
+        </span>
+        <span class="dist">
+          <%= text_field_tag "check_points[][dist]", cp.dist %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+  <%= submit_tag "submit" %>
+<% end %>
