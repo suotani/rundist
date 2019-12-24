@@ -1,6 +1,6 @@
 class ModesController < ApplicationController
   def index
-    @modes = Mode.eager_load(:check_points)
+    @modes = Mode.all
   end
 
   def new
