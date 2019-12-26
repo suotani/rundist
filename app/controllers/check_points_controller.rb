@@ -26,7 +26,7 @@ class CheckPointsController < ApplicationController
       CheckPoint.where(mode_id: params[:id]).destroy_all
       CheckPoint.import! @check_points
     end
-      redirect_to  new_check_point_path(id: Mode.take.id)
+      redirect_to  new_check_point_path(id: params[:id])
   rescue ActiveRecord::RecordInvalid
       render "new"
   end

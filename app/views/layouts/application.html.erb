@@ -24,7 +24,13 @@
     }
     %>
       <div class="header-info" >
-        <h1>ハシッタ君</h1>
+        <h1>
+          <% if @current_user %>
+            <%= link_to "ハシッタ君", user_works_path(user_id: @current_user.custom_url)%>
+          <% else %>
+            ハシッタ君
+          <% end %>
+        </h1>
         <p class="page_title">
           <% if @current_user && ["users", "works", "calenders"].include?(controller.controller_name) %>
             <%= link_to "サマリー", user_works_path(user_id: @current_user.custom_url) %>

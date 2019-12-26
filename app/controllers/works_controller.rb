@@ -9,6 +9,9 @@ class WorksController < AuthController
               .where(created_at: Time.zone.today.beginning_of_day..Time.zone.today.end_of_day)
               .first
     @work = Work.new(dist: 0,cal: 0) unless @work.present?
+    @check_point = @current_user.mode.check_points.where("dist < ?", @current_user.total_dist).order(:dist).last
+    @next_check_point = @current_user.mode.check_points.where("dist > ?", @current_user.total_dist).order(:dist).first
+    @next_check_point_dist = @next_check_point.dist.to_f - @current_user.total_dist if @next_check_point
   end
   
   def new

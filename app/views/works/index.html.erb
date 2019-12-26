@@ -2,8 +2,20 @@
 <div class="conteiner">
   <h2>総走行距離</h2>
   <p><%= @total_dist.round(2) %>km</p>
-  <p>大阪ー東京間(50.3km)を達成しました！</p>
-  <p>次のチェックポイントまであと11km</p>
+  <p>
+    <% if @check_point %>
+      <%= @check_point.start_point %>(<%= @check_point.dist.round(2) %>km)を達成しました！
+    <% else %>
+      まだチェックポイントに到達していません。もう少し頑張りましょう
+    <% end %>
+  </p>
+  <p>
+    <% if @next_check_point %>
+      次のチェックポイントまであと<%= @next_check_point_dist.round(2) %>km
+    <% else %>
+      全てのチェックポイントを通過しました。おめでとうございます！！
+    <% end %>
+  </p>
   <h2>総消費カロリー</h2>
   <p><%= @total_cal.round(2) %>kcal</p>
   <h2>本日の運動量</h2>
