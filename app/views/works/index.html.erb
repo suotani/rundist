@@ -24,4 +24,9 @@
   /
   <%= @work.cal.round(2) %>kcal
   </p>
+  <h2>本日の体重計測</h2>
+  <% @healths.each do |h| %>
+    <p><%= h.created_at.strftime("%Y/%m/%d %H:%M") %></p>
+    <p><%= h.weight.round(2) %>kg / <%= h.metabolism.round(2) %>kcal / <%= h.muscle.round(2) %></p>
+  <% end %>
 </div>

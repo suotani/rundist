@@ -42,7 +42,10 @@
         <ul>
           <% if @current_user && ["users", "works", "calenders"].include?(controller.controller_name) %>
             <li class="btn btn-primary link_wrap">
-              <%= link_to "+記録", new_user_work_path(user_id: @current_user.custom_url) %>
+              <%= link_to "+走行距離", new_user_work_path(user_id: @current_user.custom_url) %>
+            </li>
+            <li class="btn btn-primary link_wrap">
+              <%= link_to "+体重", new_user_health_path(user_id: @current_user.custom_url) %>
             </li>
           <% end %>
         </ul>

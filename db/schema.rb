@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_17_155744) do
+ActiveRecord::Schema.define(version: 2020_01_03_125701) do
 
   create_table "check_points", force: :cascade do |t|
     t.string "mode_id"
     t.string "start_point"
     t.string "end_point"
     t.decimal "dist"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "healths", force: :cascade do |t|
+    t.integer "user_id"
+    t.decimal "weight"
+    t.decimal "metabolism"
+    t.decimal "muscle"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

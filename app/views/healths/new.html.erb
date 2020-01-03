@@ -1,0 +1,26 @@
+<%= stylesheet_link_tag    "users_new", media: 'all', 'data-turbolinks-track': 'reload' %>
+<% if @health.errors.full_messages.present? %>
+  <% @health.errors.full_messages.each do |message| %>
+    <p class="error_message"><%= message %></p>
+  <% end %>
+<% end %>
+<%= form_for @health, url: user_healths_path(user_id: @current_user.custom_url)  do |f| %>
+  <div class="input">
+    <label class="input_label">体重(kg)</label>
+    <%= f.number_field :weight %>
+  </div>
+
+  <div class="input">
+    <label class="input_label">基礎代謝(kcal)</label>
+    <%= f.number_field :metabolism %>
+  </div>
+
+  <div class="input">
+    <label class="input_label">筋肉量</label>
+    <%= f.number_field :muscle %>
+  </div>
+
+  <div class="submit">
+    <%= submit_tag "OK", class: "btn btn-primary" %>
+  </div>
+<% end %>
