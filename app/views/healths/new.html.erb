@@ -7,17 +7,17 @@
 <%= form_for @health, url: user_healths_path(user_id: @current_user.custom_url)  do |f| %>
   <div class="input">
     <label class="input_label">体重(kg)</label>
-    <%= f.number_field :weight %>
+    <%= f.number_field :weight, step: 0.01 %>
   </div>
 
   <div class="input">
     <label class="input_label">基礎代謝(kcal)</label>
-    <%= f.number_field :metabolism %>
+    <%= f.number_field :metabolism, step: 0.01 %>
   </div>
 
   <div class="input">
     <label class="input_label">筋肉量</label>
-    <%= f.number_field :muscle %>
+    <%= f.number_field :muscle, step: 0.01 %>
   </div>
 
   <div class="submit">
