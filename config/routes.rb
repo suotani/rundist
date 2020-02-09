@@ -34,5 +34,7 @@ Rails.application.routes.draw do
       resources :check_points, only: [:index, :new, :create]
     end
   end
+
+  resources :todos
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

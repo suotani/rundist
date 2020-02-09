@@ -20,6 +20,11 @@
     <%= f.number_field :muscle, step: 0.01 %>
   </div>
 
+  <div class="input">
+    <label class="input_label">体脂肪率(パーセント)</label>
+    <%= f.number_field :fat_rate, step: 0.01 %>
+  </div>
+
   <div class="submit">
     <%= submit_tag "OK", class: "btn btn-primary" %>
   </div>

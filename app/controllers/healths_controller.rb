@@ -22,7 +22,7 @@ class HealthsController < AuthController
   private
 
   def health_params
-    params.require(:health).permit(:weight, :metabolism, :muscle).tap do |v|
+    params.require(:health).permit(:weight, :metabolism, :muscle, :fat_rate).tap do |v|
       v[:user_id] = @current_user.id
     end
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_03_125701) do
+ActiveRecord::Schema.define(version: 2020_02_09_130039) do
 
   create_table "check_points", force: :cascade do |t|
     t.string "mode_id"
@@ -28,11 +28,20 @@ ActiveRecord::Schema.define(version: 2020_01_03_125701) do
     t.decimal "muscle"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "fat_rate"
   end
 
   create_table "modes", force: :cascade do |t|
     t.string "name"
     t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "todos", force: :cascade do |t|
+    t.integer "status"
+    t.string "title"
+    t.text "explain"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
